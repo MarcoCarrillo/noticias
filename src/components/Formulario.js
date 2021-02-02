@@ -3,9 +3,21 @@ import styles from './Formulario.module.css';
 import useSelect from '../hooks/useSelect';
 
 const Formulario = () => {
+    //opciones
+        const OPCIONES = [
+            {value:'general', label: 'General'},
+            {value:'business', label: 'Negocios'},
+            {value:'entertainment', label: 'Entretenimiento'},
+            {value:'health', label: 'Salud'},
+            {value:'science', label: 'Ciencia'},
+            {value:'sports', label: 'Deportes'},
+            {value:'technology', label: 'Tecnología'}
+        ];
+    
+        //utilizar custom hook
+    const [categoria, SelectNoticias] = useSelect('general', OPCIONES);
 
-    //utilizar custom hook
-    const [categoria, SelectNoticias] = useSelect();
+    
 
 
     return ( 
